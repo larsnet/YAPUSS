@@ -176,7 +176,8 @@ $file = $_SERVER['PHP_SELF'];  					// path & file name of this running php scri
 $dirname = pathinfo($file, PATHINFO_DIRNAME);	// relative path
 	if ($dirname == "/") {$dirname = "";}
 $dirnamefull = getcwd();						// full path : expl /volume1/web/...
-$SessionFile = substr(basename($_SERVER['SCRIPT_NAME']).PHP_EOL, 0, -4)."session";
+//$SessionFile = substr(basename($_SERVER['SCRIPT_NAME']).PHP_EOL, 0, -4)."session";  Modify subfolder with write permissions
+$SessionFile = "/volume1/web/SSS_session/SSS_Get.session";
 //$SessionSave = (object)array();
 
 // URL parameters
